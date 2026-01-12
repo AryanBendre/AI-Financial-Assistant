@@ -21,7 +21,7 @@ def call_gemini(prompt: str) -> Optional[str]:
         return None
 
     try:
-        model = genai.GenerativeModel("gemini-pro")
+        model = genai.GenerativeModel("gemini-2.5-flash")
         response = model.generate_content(prompt)
         
         # Check if response is valid
@@ -33,3 +33,4 @@ def call_gemini(prompt: str) -> Optional[str]:
     except Exception as e:
         print(f"❌ Gemini Error: {e}")
         return None
+
