@@ -1,0 +1,524 @@
+/* =========================
+   Global Theme (AI + Finance)
+========================= */
+:root {
+  --bg-dark: #050b1a;
+  --card-bg: rgba(15, 25, 50, 0.75);
+  --glass-border: rgba(120, 200, 255, 0.25);
+
+  --neon-blue: #3fd0ff;
+  --neon-green: #4cffb0;
+  --neon-pink: #ff5fa2;
+  --neon-yellow: #ffd166;
+
+  --text-main: #eaf6ff;
+  --text-muted: #9bb3c9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top, #0b1d3a, #02060f 70%);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* =========================
+   Container
+========================= */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* =========================
+   Headings
+========================= */
+h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  background: linear-gradient(
+    90deg,
+    var(--neon-blue),
+    var(--neon-green)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* =========================
+   Glass Cards
+========================= */
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 25px;
+  margin-top: 25px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 0 25px rgba(63, 208, 255, 0.08);
+}
+
+/* Accent variants */
+.warning {
+  border-left: 5px solid var(--neon-pink);
+}
+
+.advice {
+  border-left: 5px solid var(--neon-blue);
+}
+
+.closing {
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(76, 255, 176, 0.15),
+    rgba(63, 208, 255, 0.15)
+  );
+}
+
+/* =========================
+   Forms
+========================= */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 10px rgba(63, 208, 255, 0.4);
+}
+
+/* =========================
+   Buttons
+========================= */
+button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  color: #002;
+  background: linear-gradient(
+    90deg,
+    var(--neon-blue),
+    var(--neon-green)
+  );
+  box-shadow: 0 0 25px rgba(63, 208, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(63, 208, 255, 0.7);
+}
+
+/* =========================
+   Expense Table
+========================= */
+table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: center;
+}
+
+table th {
+  background: rgba(63, 208, 255, 0.15);
+  color: var(--neon-blue);
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* =========================
+   GLOBAL AI + FINANCE THEME
+========================= */
+:root {
+  --bg-dark: #020617;
+  --card-bg: rgba(15, 25, 50, 0.78);
+  --glass-border: rgba(120, 200, 255, 0.25);
+
+  --neon-blue: #4fd1ff;
+  --neon-green: #4cffb0;
+  --neon-pink: #ff5fa2;
+
+  --text-main: #eaf6ff;
+  --text-muted: #9bb3c9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0b1d3a, #020617 70%);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* =========================
+   GLASS CARDS
+========================= */
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 28px;
+  margin-top: 28px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 0 35px rgba(79, 209, 255, 0.1);
+}
+
+.card h3 {
+  color: #c7f9ff;
+  margin-bottom: 14px;
+}
+
+/* ===============================
+   OVERVIEW CARD – REFINED
+================================ */
+
+#summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle AI glow line */
+#summary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(79, 209, 255, 0.15),
+    transparent
+  );
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Section title */
+#summary h3 {
+  grid-column: span 2;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 0.6px;
+  color: var(--neon-blue);
+  text-transform: uppercase;
+}
+
+/* Metric blocks */
+#summary p {
+  background: rgba(15, 25, 50, 0.6);
+  border: 1px solid rgba(120, 200, 255, 0.2);
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  box-shadow: inset 0 0 18px rgba(79, 209, 255, 0.12);
+}
+
+/* Metric labels */
+#summary p strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #9bb3c9;
+  letter-spacing: 0.4px;
+}
+
+/* Metric values */
+#summary p span,
+#summary p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Income highlight */
+#summary p:nth-of-type(1) {
+  border-color: rgba(79, 209, 255, 0.45);
+  box-shadow: 0 0 22px rgba(79, 209, 255, 0.25);
+}
+
+/* Expense highlight */
+#summary p:nth-of-type(2) {
+  border-color: rgba(255, 95, 162, 0.45);
+  box-shadow: 0 0 22px rgba(255, 95, 162, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  #summary {
+    grid-template-columns: 1fr;
+  }
+
+  #summary h3 {
+    grid-column: span 1;
+  }
+}
+/* =========================
+   50:30:20 BREAKDOWN – REFINED
+========================= */
+
+#breakdown {
+  position: relative;
+}
+
+#breakdown::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(79, 209, 255, 0.12),
+    transparent
+  );
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#breakdown p {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  color: #cbd5f5;
+  letter-spacing: 0.4px;
+}
+
+/* Progress track */
+.progress {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.8);
+  overflow: hidden;
+  margin-bottom: 22px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* Progress fill */
+.progress span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.9s ease;
+  box-shadow: 0 0 14px rgba(255,255,255,0.25);
+}
+
+/* Category colors */
+.needs-bar {
+  background: linear-gradient(90deg, #4fd1ff, #67e8f9);
+  box-shadow: 0 0 18px rgba(79, 209, 255, 0.6);
+}
+
+.wants-bar {
+  background: linear-gradient(90deg, #ff5fa2, #fb7185);
+  box-shadow: 0 0 18px rgba(255, 95, 162, 0.55);
+}
+
+.invest-bar {
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  box-shadow: 0 0 18px rgba(34, 197, 94, 0.55);
+}
+
+/* =========================
+   AI INSIGHTS – REFINED
+========================= */
+
+#advice {
+  position: relative;
+  border-left: 4px solid var(--neon-blue);
+}
+
+#advice::after {
+  content: none;
+  position: absolute;
+  top: -12px;
+  right: 16px;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: rgba(79, 209, 255, 0.7);
+}
+
+.ai-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 14px;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  box-shadow:
+    inset 0 0 12px rgba(79, 209, 255, 0.12),
+    0 0 18px rgba(79, 209, 255, 0.08);
+}
+
+.ai-tip::before {
+  content: "🤖";
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+/* =========================
+   CLOSING CARD – REFINED
+========================= */
+
+.closing {
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(34, 211, 238, 0.16),
+    rgba(74, 222, 128, 0.14)
+  );
+  border: 1px solid rgba(110, 231, 249, 0.35);
+  box-shadow: 0 0 35px rgba(79, 209, 255, 0.18);
+}
+
+.closing p {
+  color: #d1fae5;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  letter-spacing: 0.3px;
+}
+
+/* =========================
+   BUTTONS – CONFIDENT ACTION
+========================= */
+
+button {
+  margin-top: 24px;
+  padding: 14px 42px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #020617;
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-green));
+  box-shadow:
+    0 0 28px rgba(79, 209, 255, 0.55),
+    inset 0 0 6px rgba(255,255,255,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 42px rgba(79, 209, 255, 0.9),
+    inset 0 0 6px rgba(255,255,255,0.5);
+}
+
+/* =========================
+   LOADING SCREEN – AI POLISH
+========================= */
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #020b1c, #000814);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #7fffd4;
+  z-index: 999;
+}
+
+.loader {
+  width: 64px;
+  height: 64px;
+  border: 5px solid rgba(255,255,255,0.08);
+  border-top: 5px solid #00f5d4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 18px;
+  box-shadow: 0 0 25px rgba(0, 245, 212, 0.45);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

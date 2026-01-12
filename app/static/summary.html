@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Financial Summary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loading" class="loading-screen">
+    <div class="loader"></div>
+    <p>AI is analyzing your finances...</p>
+  </div>
+
+  <!-- Main Content -->
+  <div id="content" class="container" style="display:none;">
+    <h1>Your Monthly Financial Summary</h1>
+    <p>Here is a snapshot of your spending behavior this month.</p>
+
+    <div class="card" id="summary"></div>
+    <div class="card" id="breakdown"></div>
+    <div class="card advice" id="advice"></div>
+
+    <div class="card closing">
+      <p>🌱 <strong>You're Building Financial Awareness</strong></p>
+      <p>Small adjustments today lead to financial freedom tomorrow.</p>
+
+      <button id="restartBtn" class="primary-btn">
+        Track Another Month
+      </button>
+    </div>
+  </div>
+
+  <script src="summary.js"></script>
+</body>
+</html>
