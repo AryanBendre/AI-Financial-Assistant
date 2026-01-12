@@ -3,6 +3,14 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import user, income, expense, analysis
+from app.database import engine   # <--- Import the DB engine
+from app import models            # <--- Import the models
+
+# =======================================================
+# 🏗️ THE FIX: BUILD THE TABLES AUTOMATICALLY
+# This reads models.py and creates the empty tables in the DB
+# =======================================================
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="AI-Based Personal Financial Awareness Assistant",
@@ -11,12 +19,10 @@ app = FastAPI(
 )
 
 # --- 1. SETUP PATHS ---
-# This ensures we find the 'static' folder correctly, no matter where the server starts
 current_dir = os.path.dirname(os.path.abspath(__file__))
 static_dir = os.path.join(current_dir, "static")
 
 # --- 2. MIDDLEWARE ---
-# (Kept just in case, but less critical now that we are merged)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -36,6 +42,5 @@ app.include_router(income.router)
 app.include_router(expense.router)
 app.include_router(analysis.router)
 
-# --- 5. SERVE FRONTEND (Crucial Step) ---
-# This tells FastAPI: "Serve index.html and other files from the static folder"
+# --- 5. SERVE FRONTEND ---
 app.mount("/", StaticFiles(directory=static_dir, html=True), name="static")
