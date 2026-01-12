@@ -8,3 +8,4 @@ aiofiles
 gunicorn
 google-generativeai
 protobuf==5.29.3
+grpcio==1.70.0
