@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from google import genai
+import google.generativeai as genai
 
 load_dotenv()
 
@@ -30,3 +30,4 @@ def call_gemini(prompt: str) -> str | None:
     except Exception as e:
         print("Gemini error:", e)
         return None
+
