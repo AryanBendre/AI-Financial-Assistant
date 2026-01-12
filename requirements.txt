@@ -7,3 +7,4 @@ psycopg2-binary
 aiofiles
 gunicorn
 google-generativeai
+protobuf==5.29.3
