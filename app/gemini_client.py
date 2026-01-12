@@ -1,33 +1,35 @@
 import os
-from dotenv import load_dotenv
 import google.generativeai as genai
+from typing import Optional  # <--- IMPORT THIS
 
-load_dotenv()
-
-USE_GEMINI = os.getenv("USE_GEMINI", "false").lower() == "true"
+# Load API Key
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-client = None
+if GEMINI_API_KEY:
+    genai.configure(api_key=GEMINI_API_KEY)
+    USE_GEMINI = True
+    print("✅ GEMINI_API_KEY loaded.")
+else:
+    USE_GEMINI = False
+    print("⚠️ GEMINI_API_KEY missing. AI features disabled.")
 
-if USE_GEMINI and GEMINI_API_KEY:
-    client = genai.Client(api_key=GEMINI_API_KEY)
-
-print("USE_GEMINI:", USE_GEMINI)
-print("GEMINI_API_KEY loaded:", bool(GEMINI_API_KEY))
-
-
-def call_gemini(prompt: str) -> str | None:
-    if not client:
+# ---------------------------------------------------------
+# FIX: Use "Optional[str]" instead of "str | None"
+# ---------------------------------------------------------
+def call_gemini(prompt: str) -> Optional[str]:  
+    if not USE_GEMINI:
         return None
 
     try:
-        response = client.models.generate_content(
-            model="models/gemini-2.5-flash",
-            contents=prompt
-        )
-        return response.text.strip()
-
-    except Exception as e:
-        print("Gemini error:", e)
+        model = genai.GenerativeModel("gemini-pro")
+        response = model.generate_content(prompt)
+        
+        # Check if response is valid
+        if response and response.text:
+            return response.text.strip()
+        
         return None
 
+    except Exception as e:
+        print(f"❌ Gemini Error: {e}")
+        return None
