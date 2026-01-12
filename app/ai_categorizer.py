@@ -1,5 +1,4 @@
-from typing import Tuple
-
+from typing import Tuple, Optional # <--- Added Optional
 from app.gemini_client import call_gemini
 
 NEEDS_KEYWORDS = [
@@ -17,8 +16,8 @@ INVEST_KEYWORDS = [
     "fd", "investment", "stocks"
 ]
 
-
-def rule_based_category(description: str) -> Tuple[str | None, str | None]:
+# FIX: Changed "str | None" to "Optional[str]"
+def rule_based_category(description: str) -> Tuple[Optional[str], Optional[str]]:
     desc = description.lower()
 
     for word in INVEST_KEYWORDS:
@@ -37,7 +36,8 @@ def rule_based_category(description: str) -> Tuple[str | None, str | None]:
 
 
 def gemini_category(description: str) -> Tuple[str, str]:
-    prompt = f"""
+    prompt = f
+    """
 You are a financial categorization assistant.
 
 Classify the expense below into one category only:
