@@ -21,4 +21,5 @@ COPY --chown=user . $HOME/app
 EXPOSE 7860
 
 # Run main.py from the root of the copy
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860"]
