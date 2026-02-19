@@ -20,7 +20,8 @@ app = FastAPI(
 
 # --- 1. SETUP PATHS ---
 current_dir = os.path.dirname(os.path.abspath(__file__))
-static_dir = os.path.join(current_dir, "static")
+static_dir = os.path.join(current_dir, "static") # static is in the same folder as main.py
+app.mount("/", StaticFiles(directory=static_dir, html=True), name="static")
 
 # --- 2. MIDDLEWARE ---
 app.add_middleware(
@@ -44,3 +45,4 @@ app.include_router(analysis.router)
 
 # --- 5. SERVE FRONTEND ---
 app.mount("/", StaticFiles(directory=static_dir, html=True), name="static")
+
