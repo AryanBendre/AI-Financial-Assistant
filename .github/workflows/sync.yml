@@ -1,1 +1,12 @@
-
+name: Sync to Hugging Face hub
+on: [push]
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with: {fetch-depth: 0}
+      - name: Push to hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: git push --force https://AryanBendre:$HF_TOKEN@huggingface.co/spaces/AryanBendre/FinsightAI2006 main
