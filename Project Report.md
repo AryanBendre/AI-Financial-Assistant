@@ -5,7 +5,7 @@ FinsightAI is a comprehensive full-stack web application designed to help users 
 ---
 
 ## 🚀 Live Demo
-View the deployed project on **Hugging Face Spaces**.
+https://aryanbendre-finsightai2006.hf.space
 
 ---
 
